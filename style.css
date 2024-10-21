@@ -1,0 +1,44 @@
+/* -------------------------------------------- */
+/* body */
+:root {
+  --gap: 0.75rem;
+  --white: #fffffe;
+  --black: #121212;
+  --transition: all 0.3s ease;
+  --blur: blur(1rem) saturate(180%);
+  --shadow: 0 1px 2px #12121230, inset 1px 2px 3px #fffffe30;
+}
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  list-style: none;
+  color: currentColor;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  color: var(--white);
+  font-size: 2rem;
+  background-color: #121212;
+  font-family: "Poppins", "sans-serif";
+}
+html,
+body {
+  width: 100%;
+}
+.base {
+  padding: var(--gap);
+  margin: 2rem 1.5rem;
+}
+p {
+  color: var(--black);
+}
+/* body */
+/* -------------------------------------------- */
