@@ -15,5 +15,12 @@ let dataTypes = {
 // let a = Array.from(dataTypes).forEach((element) => {
 // //   return typeof element;
 // });
+for (i in dataTypes) {
+  console.log(i);
+}
+// console.log(dataTypes);
 
-console.log(dataTypes);
+String.prototype.strong = function () {
+  return `<strong>${this}</strong>`;
+};
+// new Function created by me return strong tag
