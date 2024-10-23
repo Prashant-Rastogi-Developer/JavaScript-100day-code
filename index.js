@@ -24,3 +24,9 @@ String.prototype.strong = function () {
   return `<strong>${this}</strong>`;
 };
 // new Function created by me return strong tag
+
+String.prototype.tag = function (tagName) {
+  return `<${tagName}>${this}</${tagName}>`;
+};
+// 23-10-24 19:29 wednesday
+// new Function created by me return HTML tag you want
