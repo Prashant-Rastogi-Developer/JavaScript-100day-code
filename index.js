@@ -30,3 +30,18 @@ String.prototype.tag = function (tagName) {
 };
 // 23-10-24 19:29 wednesday
 // new Function created by me return HTML tag you want
+// for (const [property, key] of Object.(dataTypes)) {
+//   console.log(property, key);
+// }
+
+for (const element of Object.values(dataTypes)) {
+  console.log(typeof element);
+}
+// --------------------------------------------
+const number = new Number(700);
+console.log(number);
+console.log(typeof number);
+console.log(number.toString());
+console.log(typeof number.toString());
+console.log(number.toFixed(2));
+console.log(number.toPrecision(4));
