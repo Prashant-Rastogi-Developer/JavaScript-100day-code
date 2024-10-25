@@ -45,3 +45,19 @@ console.log(number.toString());
 console.log(typeof number.toString());
 console.log(number.toFixed(2));
 console.log(number.toPrecision(4));
+// --------------------------------------------
+
+function user(name, id) {
+  this.name = name;
+  this.id = id;
+}
+let hitesh = new user("hitesh", "001");
+console.log(hitesh);
+{
+  let entries = Object.entries(hitesh);
+  let keys = Object.keys(hitesh);
+  let values = Object.values(hitesh);
+  console.log(entries);
+  console.log(keys);
+  console.log(values);
+}
