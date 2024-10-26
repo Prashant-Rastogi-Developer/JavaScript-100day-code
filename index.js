@@ -61,3 +61,11 @@ console.log(hitesh);
   console.log(keys);
   console.log(values);
 }
+class User {
+  constructor(name, id) {
+    this.name = name;
+    this.id = id;
+  }
+}
+let aayush = new User("aayush", 18);
+console.log(aayush);
