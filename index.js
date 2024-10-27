@@ -69,3 +69,45 @@ class User {
 }
 let aayush = new User("aayush", 18);
 console.log(aayush);
+
+// --------------------------------------------
+// time container
+const dateElement = document.getElementById(`date`);
+const dayElement = document.getElementById(`day`);
+const monthElement = document.getElementById(`month`);
+const yearElement = document.getElementById(`year`);
+const hourElement = document.getElementById(`hour`);
+const minuteElement = document.getElementById(`minute`);
+
+const weekDays = [
+  "Sunday",
+  "Monday",
+  "Tuesday",
+  "Wednesday",
+  "Thursday",
+  "Friday",
+  "Saturday",
+];
+const monthName = [
+  "January",
+  "February",
+  "March",
+  "April",
+  "May",
+  "June",
+  "July",
+  "August",
+  "September",
+  "October",
+  "November",
+  "December",
+];
+const current = new Date();
+dateElement.textContent = current.getDate();
+dayElement.textContent = weekDays[current.getDay()];
+monthElement.textContent = monthName[current.getMonth()];
+yearElement.textContent = current.getFullYear();
+hourElement.textContent = current.getHours();
+minuteElement.textContent = current.getMinutes();
+// time container
+// --------------------------------------------

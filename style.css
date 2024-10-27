@@ -42,3 +42,16 @@ p {
 }
 /* body */
 /* -------------------------------------------- */
+/* time container */
+.currentDate,
+.currentTime {
+  display: flex;
+  gap: var(--gap);
+}
+.currentDate .text,
+.currentTime .text {
+  padding: var(--gap);
+  border-bottom: 1px solid yellow;
+}
+/* time container */
+/* -------------------------------------------- */
