@@ -1,7 +1,20 @@
 console.log("Here is JavaScript Code: ");
 
-let text = "The Quick Brown Fox Jumps Over The Lazy Dog.";
+// --------------------------------------------
+// Text manipulation
+const text = "The Quick Brown Fox Jumps Over The Lazy Dog.";
 console.log(text);
+// return: The Quick Brown Fox Jumps Over The Lazy Dog.
+console.log(text.split("").reverse().join(""));
+// return: .goD yzaL ehT revO spmuJ xoF nworB kciuQ ehT
+console.log(text.split(" ").reverse().join(" "));
+// return: Dog. Lazy The Over Jumps Fox Brown Quick The
+console.log(text.split("").reverse().join("").split(" ").reverse().join(" "));
+// return: ehT kciuQ nworB xoF spmuJ revO ehT yzaL .goD
+console.log(text.split("").join(" "));
+// return: T h e   Q u i c k   B r o w n   F o x   J u m p s   O v e r   T h e   L a z y   D o g .
+// Text manipulation
+// --------------------------------------------
 
 let dataTypes = {
   null: null,
