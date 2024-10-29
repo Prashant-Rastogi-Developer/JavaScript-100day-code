@@ -84,6 +84,24 @@ let aayush = new User("aayush", 18);
 console.log(aayush);
 
 // --------------------------------------------
+// card
+const content1 = document.getElementById(`content-1`);
+const tag = (tag, className, content) => {
+  const element = document.createElement(tag);
+  element.className = className;
+  element.appendChild(document.createTextNode(content));
+  return element;
+};
+const card = (title, text) => {
+  const card = tag(`article`, `card`, ``);
+  const cardTitle = tag(`h3`, `card-title`, title);
+  const cardText = tag(`p`, `card-text`, text);
+  card.append(cardTitle, cardText);
+  content1.appendChild(card);
+};
+card("this is title", "this is text in this article");
+// card
+// --------------------------------------------
 // time container
 const dateElement = document.getElementById(`date`);
 const dayElement = document.getElementById(`day`);

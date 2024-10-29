@@ -19,15 +19,14 @@
   color: currentColor;
   text-decoration: none;
   box-sizing: border-box;
+  font-family: "Poppins", "sans-serif";
 }
 html {
   scroll-behavior: smooth;
 }
 body {
   color: var(--white);
-  font-size: 2rem;
   background-color: #121212;
-  font-family: "Poppins", "sans-serif";
 }
 html,
 body {
@@ -42,11 +41,36 @@ p {
 }
 /* body */
 /* -------------------------------------------- */
+/* container */
+.container {
+  display: flex;
+  gap: var(--gap);
+  align-items: center;
+  text-transform: capitalize;
+  padding: var(--gap);
+}
+.container .card {
+  padding: var(--gap);
+  border-radius: var(--gap);
+  background-color: silver;
+  background-image: linear-gradient(to top left, #121212, #444444);
+  box-shadow: var(--shadow);
+}
+.container .card .card-title {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+.container .card .card-text {
+  color: var(--white);
+}
+/* container */
+/* -------------------------------------------- */
 /* time container */
 .currentDate,
 .currentTime {
   display: flex;
   gap: var(--gap);
+  font-size: 2rem;
 }
 .currentDate .text,
 .currentTime .text {
