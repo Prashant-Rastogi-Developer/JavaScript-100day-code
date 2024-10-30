@@ -102,6 +102,21 @@ const card = (title, text) => {
 card("this is title", "this is text in this article");
 // card
 // --------------------------------------------
+// array methods
+const arr = [1, 2, 3, 4, 5, 7, 9, "string", true];
+arr.push(false, null, undefined, 100);
+arr.pop();
+arr.shift();
+arr.unshift(10);
+console.log(arr);
+console.log(arr.splice(1, 4));
+console.log(arr);
+arr.sort();
+arr.reverse();
+// arr.fill(1)
+console.log(arr);
+// these methods of array are change the original array
+// --------------------------------------------
 // time container
 const dateElement = document.getElementById(`date`);
 const dayElement = document.getElementById(`day`);
