@@ -117,6 +117,19 @@ arr.reverse();
 console.log(arr);
 // these methods of array are change the original array
 // --------------------------------------------
+// new Object()
+{
+  let sym = Symbol("this is a symbol");
+  let num = new Number(700);
+  const obj = {
+    name: "hitesh",
+    surname: "chadhary",
+    [sym]: "key1",
+    [num]: "num1",
+  };
+  console.log("object you see it: ", obj);
+}
+// --------------------------------------------
 // time container
 const dateElement = document.getElementById(`date`);
 const dayElement = document.getElementById(`day`);
