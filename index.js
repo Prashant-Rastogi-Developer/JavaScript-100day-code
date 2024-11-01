@@ -130,6 +130,12 @@ console.log(arr);
   console.log("object you see it: ", obj);
 }
 // --------------------------------------------
+// lastCharacter() function
+function lastCharacter(string) {
+  return string[string.length - 1];
+}
+console.log(lastCharacter("hitesh chadhary"));
+// --------------------------------------------
 // time container
 const dateElement = document.getElementById(`date`);
 const dayElement = document.getElementById(`day`);
