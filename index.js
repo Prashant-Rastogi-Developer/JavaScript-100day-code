@@ -130,11 +130,16 @@ console.log(arr);
   console.log("object you see it: ", obj);
 }
 // --------------------------------------------
-// lastCharacter() function
+// lastCharacter()
 function lastCharacter(string) {
   return string[string.length - 1];
 }
 console.log(lastCharacter("hitesh chadhary"));
+// --------------------------------------------
+// greet()
+function greet(name = "hitesh") {
+  return `Have a Good day, ${name}`;
+}
 // --------------------------------------------
 // time container
 const dateElement = document.getElementById(`date`);
