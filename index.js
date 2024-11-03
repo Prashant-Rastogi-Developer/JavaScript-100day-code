@@ -141,6 +141,17 @@ function greet(name = "hitesh") {
   return `Have a Good day, ${name}`;
 }
 // --------------------------------------------
+// setFirstElement()
+function setFirstElement(array, element) {
+  array.shift();
+  array.unshift(element);
+  return Array.from(array);
+}
+{
+  const result = setFirstElement;
+  console.log(result([1, 2, 4, 5], 7));
+}
+// --------------------------------------------
 // time container
 const dateElement = document.getElementById(`date`);
 const dayElement = document.getElementById(`day`);
