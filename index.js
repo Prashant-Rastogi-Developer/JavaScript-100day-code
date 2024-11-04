@@ -152,6 +152,16 @@ function setFirstElement(array, element) {
   console.log(result([1, 2, 4, 5], 7));
 }
 // --------------------------------------------
+// arrayToString()
+function arrayToString(...array) {
+  return String(array);
+}
+{
+  const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, "string", true, false];
+  const result = arrayToString(array);
+  console.log(result);
+}
+// --------------------------------------------
 // time container
 const dateElement = document.getElementById(`date`);
 const dayElement = document.getElementById(`day`);
