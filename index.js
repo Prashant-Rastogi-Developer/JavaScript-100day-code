@@ -162,6 +162,15 @@ function arrayToString(...array) {
   console.log(result);
 }
 // --------------------------------------------
+// getMiddle()
+function getMiddleValueOfSingleArray(array) {
+  return array[1];
+}
+{
+  const result = getMiddleValueOfSingleArray;
+  console.log(result([1, 2, 3]));
+}
+// --------------------------------------------
 // time container
 const dateElement = document.getElementById(`date`);
 const dayElement = document.getElementById(`day`);
