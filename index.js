@@ -171,6 +171,22 @@ function getMiddleValueOfSingleArray(array) {
   console.log(result([1, 2, 3]));
 }
 // --------------------------------------------
+// check password
+function enterPassword(password, passwordRepeat) {
+  if (password === passwordRepeat && password.length >= 7) {
+    return true;
+  }
+  return false;
+}
+{
+  const pwd1 = enterPassword("abcdef", "abcdef");
+  const pwd2 = enterPassword("1234567abcd", "1234567abcd");
+  const pwd3 = enterPassword("1234567abcd", "abcd1234567");
+  console.log("password1: ", pwd1);
+  console.log("password2: ", pwd2);
+  console.log("password3: ", pwd3);
+}
+// --------------------------------------------
 // time container
 const dateElement = document.getElementById(`date`);
 const dayElement = document.getElementById(`day`);
