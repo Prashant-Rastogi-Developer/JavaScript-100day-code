@@ -187,6 +187,19 @@ function enterPassword(password, passwordRepeat) {
   console.log("password3: ", pwd3);
 }
 // --------------------------------------------
+// true length
+Object.prototype.trueLength = function () {
+  return this.length;
+};
+{
+  const array = [1, 2, 3, , undefined, null, 0, "string", true, false];
+  console.log(
+    `this is if array is convert into a string and trueLength() finds it true length and additional commas ${array.toString()}: ${array
+      .toString()
+      .trueLength()} is length`
+  );
+}
+// --------------------------------------------
 // time container
 const dateElement = document.getElementById(`date`);
 const dayElement = document.getElementById(`day`);
