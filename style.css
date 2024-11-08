@@ -19,6 +19,7 @@
   color: currentColor;
   text-decoration: none;
   box-sizing: border-box;
+  transition: var(--transition);
   font-family: "Poppins", "sans-serif";
 }
 html {
@@ -78,4 +79,22 @@ p {
   border-bottom: 1px solid yellow;
 }
 /* time container */
+/* -------------------------------------------- */
+/* container-2 */
+.container2 {
+  display: flex;
+  gap: var(--gap);
+  align-items: center;
+}
+.container2 .item {
+  --size: 16rem;
+  cursor: pointer;
+  width: var(--size);
+  height: var(--size);
+  padding: var(--gap);
+  margin: var(--gap);
+  border-radius: var(--gap);
+  box-shadow: var(--shadow);
+}
+/* container-2 */
 /* -------------------------------------------- */

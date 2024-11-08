@@ -200,6 +200,30 @@ Object.prototype.trueLength = function () {
   );
 }
 // --------------------------------------------
+// container-2 in DOM
+{
+  const content2 = document.getElementById(`content-2`);
+  const item = tag("div", "item", "");
+  const item2 = tag("div", "item", "");
+  const item3 = tag("div", "item", "");
+  content2.append(item, item2, item3);
+  item.style.backgroundColor = randomColor();
+  item2.style.backgroundColor = randomColor();
+  item3.style.backgroundColor = randomColor();
+  const items = [item, item2, item3];
+  Array.from(items).forEach((e) => {
+    e.addEventListener(`mouseover`, (e) => {
+      e.target.style.backgroundColor = randomColor();
+    });
+  });
+}
+function randomColor() {
+  const [a, b, c] = Array(3)
+    .fill(0)
+    .map(() => Math.floor(Math.random() * 255) + 1);
+  return `rgb(${[a, b, c]})`;
+}
+// --------------------------------------------
 // time container
 const dateElement = document.getElementById(`date`);
 const dayElement = document.getElementById(`day`);
