@@ -224,6 +224,9 @@ function randomColor() {
   return `rgb(${[a, b, c]})`;
 }
 // --------------------------------------------
+// use of replaceAll()
+console.log(text.split(" ").fill(0).join(' ').replaceAll(0, 7))
+// --------------------------------------------
 // time container
 const dateElement = document.getElementById(`date`);
 const dayElement = document.getElementById(`day`);
