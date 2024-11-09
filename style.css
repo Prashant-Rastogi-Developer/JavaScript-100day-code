@@ -25,10 +25,6 @@
 html {
   scroll-behavior: smooth;
 }
-body {
-  color: var(--white);
-  background-color: #121212;
-}
 html,
 body {
   width: 100%;
@@ -53,16 +49,12 @@ p {
 .container .card {
   padding: var(--gap);
   border-radius: var(--gap);
-  background-color: silver;
-  background-image: linear-gradient(to top left, #121212, #444444);
   box-shadow: var(--shadow);
+  background-image: linear-gradient(to top left, #fffffe, wheat);
 }
 .container .card .card-title {
   font-size: 1.8rem;
   margin-bottom: 1rem;
-}
-.container .card .card-text {
-  color: var(--white);
 }
 /* container */
 /* -------------------------------------------- */
@@ -76,7 +68,7 @@ p {
 .currentDate .text,
 .currentTime .text {
   padding: var(--gap);
-  border-bottom: 1px solid yellow;
+  border-bottom: 1px solid #ff0000;
 }
 /* time container */
 /* -------------------------------------------- */
@@ -97,4 +89,24 @@ p {
   box-shadow: var(--shadow);
 }
 /* container-2 */
+/* -------------------------------------------- */
+/* dark mode */
+@media (prefers-color-scheme: dark) {
+  body {
+    color: var(--white);
+    background-color: var(--black);
+  }
+  .container .card {
+    background-color: silver;
+    box-shadow: var(--shadow);
+    background-image: linear-gradient(to top left, #121212, #444444);
+  }
+  .container .card .card-text {
+    color: var(--white);
+  }
+  .currentDate .text,
+  .currentTime .text {
+    border-bottom: 1px solid yellow;
+  }
+}
 /* -------------------------------------------- */
