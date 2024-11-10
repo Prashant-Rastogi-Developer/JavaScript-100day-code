@@ -225,7 +225,7 @@ function randomColor() {
 }
 // --------------------------------------------
 // use of replaceAll()
-console.log(text.split(" ").fill(0).join(' ').replaceAll(0, 7))
+console.log(text.split(" ").fill(0).join(" ").replaceAll(0, 7));
 // --------------------------------------------
 // time container
 const dateElement = document.getElementById(`date`);
@@ -266,4 +266,18 @@ yearElement.textContent = current.getFullYear();
 hourElement.textContent = current.getHours();
 minuteElement.textContent = current.getMinutes();
 // time container
+// --------------------------------------------
+// select menubar
+const select = document.getElementById(`select`);
+const inputText = document.getElementById(`text`);
+const list = document.getElementById(`list`);
+select.addEventListener("click", function () {
+  list.classList.toggle("hide");
+});
+Array.from(list.children).forEach((e) => {
+  e.addEventListener("click", function (event) {
+    inputText.innerText = event.target.innerText;
+    list.classList.toggle("hide");
+  });
+});
 // --------------------------------------------

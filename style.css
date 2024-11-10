@@ -33,9 +33,6 @@ body {
   padding: var(--gap);
   margin: 2rem 1.5rem;
 }
-p {
-  color: var(--black);
-}
 /* body */
 /* -------------------------------------------- */
 /* container */
@@ -89,6 +86,37 @@ p {
   box-shadow: var(--shadow);
 }
 /* container-2 */
+/* -------------------------------------------- */
+/* select menubar */
+.selectField {
+  width: 10rem;
+  cursor: pointer;
+  margin: var(--gap);
+  padding: var(--gap);
+  background-color: wheat;
+}
+.hide {
+  visibility: hidden;
+}
+#list {
+  gap: 1rem;
+  width: 15rem;
+  display: grid;
+  padding: 1rem;
+  margin: var(--gap);
+  flex-direction: column;
+  border-radius: var(--gap);
+  background-color: #fffffe40;
+}
+.list-item {
+  cursor: pointer;
+  padding: 1rem;
+  background-color: #fffffe40;
+}
+.list-item:hover {
+  background-color: wheat;
+}
+/* select menubar */
 /* -------------------------------------------- */
 /* dark mode */
 @media (prefers-color-scheme: dark) {
