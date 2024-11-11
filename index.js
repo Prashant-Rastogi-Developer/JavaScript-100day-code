@@ -1,17 +1,16 @@
 // --------------------------------------------
 // Text manipulation
-const text = "The Quick Brown Fox Jumps Over The Lazy Dog.";
+const text = `The Quick Brown Fox Jumps Over The Lazy Dog.`;
 text;
 // The Quick Brown Fox Jumps Over The Lazy Dog.
-text.split("").reverse().join("");
+text.split(``).reverse().join(``);
 // .goD yzaL ehT revO spmuJ xoF nworB kciuQ ehT
-text.split(" ").reverse().join(" ");
+text.split(` `).reverse().join(` `);
 // Dog. Lazy The Over Jumps Fox Brown Quick The
-text.split("").reverse().join("").split(" ").reverse().join(" ");
+text.split(``).reverse().join(``).split(` `).reverse().join(` `);
 // ehT kciuQ nworB xoF spmuJ revO ehT yzaL .goD
-text.split("").join(" ");
+text.split(``).join(` `);
 // T h e   Q u i c k   B r o w n   F o x   J u m p s   O v e r   T h e   L a z y   D o g .
-// Text manipulation
 // --------------------------------------------
 let dataTypes = {
   null: null,
@@ -19,8 +18,8 @@ let dataTypes = {
   number: 123,
   false: false,
   undefined: undefined,
-  string: "text string",
-  symbol: Symbol("This is symbol"),
+  string: `text string`,
+  symbol: Symbol(`This is symbol`),
 };
 // let a = Array.from(dataTypes).forEach((element) => {
 // //   return typeof element;
@@ -82,7 +81,7 @@ function user(name, id) {
   this.name = name;
   this.id = id;
 }
-let hitesh = new user("hitesh", "001");
+let hitesh = new user(`hitesh`, `001`);
 hitesh; // user {name: 'hitesh', id: '001'}
 {
   let entries = Object.entries(hitesh);
@@ -98,30 +97,11 @@ class User {
     this.id = id;
   }
 }
-let aayush = new User("aayush", 18);
+let aayush = new User(`aayush`, 18);
 aayush; // User {name: 'aayush', id: 18}
-
-// --------------------------------------------
-// card
-const content1 = document.getElementById(`content-1`);
-const tag = (tag, className, content) => {
-  const element = document.createElement(tag);
-  element.className = className;
-  element.appendChild(document.createTextNode(content));
-  return element;
-};
-const card = (title, text) => {
-  const card = tag(`article`, `card`, ``);
-  const cardTitle = tag(`h3`, `card-title`, title);
-  const cardText = tag(`p`, `card-text`, text);
-  card.append(cardTitle, cardText);
-  content1.appendChild(card);
-};
-card("this is title", "this is text in this article");
-// card
 // --------------------------------------------
 // array methods
-const arr = [1, 2, 3, 4, 5, 7, 9, "string", true];
+const arr = [1, 2, 3, 4, 5, 7, 9, `string`, true];
 arr.push(false, null, undefined, 100);
 arr.pop();
 arr.shift();
@@ -137,25 +117,25 @@ arr; // (8) [undefined, true, 'string', null, false, 9, 7, 10]
 // --------------------------------------------
 // new Object()
 {
-  let sym = Symbol("this is a symbol");
+  let sym = Symbol(`this is a symbol`);
   let num = new Number(700);
   const obj = {
-    name: "hitesh",
-    surname: "chadhary",
-    [sym]: "key1",
-    [num]: "num1",
+    name: `hitesh`,
+    surname: `chadhary`,
+    [sym]: `key1`,
+    [num]: `num1`,
   };
-  "object you see it: ", obj; // object you see it:  {700: 'num1', name: 'hitesh', surname: 'chadhary', Symbol(this is a symbol): 'key1'}
+  `object you see it: `, obj; // object you see it:  {700: 'num1', name: 'hitesh', surname: 'chadhary', Symbol(this is a symbol): 'key1'}
 }
 // --------------------------------------------
 // lastCharacter()
 function lastCharacter(string) {
   return string[string.length - 1];
 }
-lastCharacter("hitesh chadhary"); // y
+lastCharacter(`hitesh chadhary`); // y
 // --------------------------------------------
 // greet()
-function greet(name = "hitesh") {
+function greet(name = `hitesh`) {
   return `Have a Good day, ${name}`;
 }
 // --------------------------------------------
@@ -175,7 +155,7 @@ function arrayToString(...array) {
   return String(array);
 }
 {
-  const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, "string", true, false];
+  const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, `string`, true, false];
   const result = arrayToString(array);
   result; // 1,2,3,4,5,6,7,8,9,10,string,true,false
 }
@@ -197,12 +177,12 @@ function enterPassword(password, passwordRepeat) {
   return false;
 }
 {
-  const pwd1 = enterPassword("abcdef", "abcdef");
-  const pwd2 = enterPassword("1234567abcd", "1234567abcd");
-  const pwd3 = enterPassword("1234567abcd", "abcd1234567");
-  "password1: ", pwd1; // false
-  "password2: ", pwd2; // true
-  "password3: ", pwd3; // false
+  const pwd1 = enterPassword(`abcdef`, `abcdef`);
+  const pwd2 = enterPassword(`1234567abcd`, `1234567abcd`);
+  const pwd3 = enterPassword(`1234567abcd`, `abcd1234567`);
+  `password1: `, pwd1; // false
+  `password2: `, pwd2; // true
+  `password3: `, pwd3; // false
 }
 // --------------------------------------------
 // true length
@@ -210,30 +190,26 @@ Object.prototype.trueLength = function () {
   return this.length;
 };
 {
-  const array = [1, 2, 3, , undefined, null, 0, "string", true, false];
+  const array = [1, 2, 3, , undefined, null, 0, `string`, true, false];
   `this is if array is convert into a string and trueLength() finds it true length and additional commas ${array.toString()}: ${array
     .toString()
     .trueLength()} is length`;
   // this is if array is convert into a string and trueLength() finds it true length and additional commas 1,2,3,,,,0,string,true,false: 28 is length
 }
 // --------------------------------------------
-// container-2 in DOM
-{
-  const content2 = document.getElementById(`content-2`);
-  const item = tag("div", "item", "");
-  const item2 = tag("div", "item", "");
-  const item3 = tag("div", "item", "");
-  content2.append(item, item2, item3);
-  item.style.backgroundColor = randomColor();
-  item2.style.backgroundColor = randomColor();
-  item3.style.backgroundColor = randomColor();
-  const items = [item, item2, item3];
-  Array.from(items).forEach((e) => {
-    e.addEventListener(`mouseover`, (e) => {
-      e.target.style.backgroundColor = randomColor();
-    });
-  });
-}
+// use of replaceAll()
+text.split(` `).fill(0).join(` `).replaceAll(0, 7); // 7 7 7 7 7 7 7 7 7
+// --------------------------------------------
+// start of dom manipulation
+// tag()
+const tag = (tag, className, content) => {
+  const element = document.createElement(tag);
+  element.className = className;
+  element.appendChild(document.createTextNode(content));
+  return element;
+};
+// --------------------------------------------
+// randomColor()
 function randomColor() {
   const [a, b, c] = Array(3)
     .fill(0)
@@ -241,8 +217,26 @@ function randomColor() {
   return `rgb(${[a, b, c]})`;
 }
 // --------------------------------------------
-// use of replaceAll()
-text.split(" ").fill(0).join(" ").replaceAll(0, 7); // 7 7 7 7 7 7 7 7 7
+// card()
+const content = document.getElementById(`content`);
+function card(title, text) {
+  const card = tag(`article`, `card`, ``);
+  const img = tag(`div`, `item`, ``);
+  const cardTitle = tag(`h3`, `card-title`, title);
+  const cardText = tag(`p`, `card-text`, text);
+  card.append(img, cardTitle, cardText);
+  img.style.backgroundColor = randomColor();
+  img.addEventListener(`mouseover`, function (e) {
+    e.target.style.backgroundColor = randomColor();
+  });
+  content.append(card);
+}
+// card(`Box-1`, text);
+// card(`Box-2`, text);
+// card(`Box-3`, text);
+for (let i = 1; i <= 7; i++) {
+  card(`Box-${i}`, text);
+}
 // --------------------------------------------
 // time container
 const dateElement = document.getElementById(`date`);
@@ -253,27 +247,27 @@ const hourElement = document.getElementById(`hour`);
 const minuteElement = document.getElementById(`minute`);
 
 const weekDays = [
-  "Sunday",
-  "Monday",
-  "Tuesday",
-  "Wednesday",
-  "Thursday",
-  "Friday",
-  "Saturday",
+  `Sunday`,
+  `Monday`,
+  `Tuesday`,
+  `Wednesday`,
+  `Thursday`,
+  `Friday`,
+  `Saturday`,
 ];
 const monthName = [
-  "January",
-  "February",
-  "March",
-  "April",
-  "May",
-  "June",
-  "July",
-  "August",
-  "September",
-  "October",
-  "November",
-  "December",
+  `January`,
+  `February`,
+  `March`,
+  `April`,
+  `May`,
+  `June`,
+  `July`,
+  `August`,
+  `September`,
+  `October`,
+  `November`,
+  `December`,
 ];
 const current = new Date();
 dateElement.textContent = current.getDate();
@@ -288,13 +282,14 @@ minuteElement.textContent = current.getMinutes();
 const select = document.getElementById(`select`);
 const inputText = document.getElementById(`text`);
 const list = document.getElementById(`list`);
-select.addEventListener("click", function () {
-  list.classList.toggle("hide");
+select.addEventListener(`click`, function () {
+  list.classList.toggle(`hide`);
 });
 Array.from(list.children).forEach((e) => {
-  e.addEventListener("click", function (event) {
+  e.addEventListener(`click`, function (event) {
     inputText.innerText = event.target.innerText;
-    list.classList.toggle("hide");
+    list.classList.toggle(`hide`);
   });
 });
+// end of dom manipulation
 // --------------------------------------------

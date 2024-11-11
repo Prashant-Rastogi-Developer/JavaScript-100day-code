@@ -14,43 +14,41 @@
     />
   </head>
   <body>
-    <div class="title">See console:</div>
-    <div class="container" id="content-1"></div>
     <!-- -------------------------------------------- -->
-    <!-- time container -->
-    <section class="base">
+    <!-- header -->
+    <header class="header">
+      <!-- -------------------------------------------- -->
+      <div class="currentTime">
+        <span class="text">Time:</span>
+        <span class="text" id="hour"></span>
+        <span class="text" id="minute"></span>
+      </div>
+      <!-- -------------------------------------------- -->
       <div class="currentDate">
         <span class="text" id="date">3</span>
         <span class="text" id="day"></span>
         <span class="text" id="month"></span>
         <span class="text" id="year"></span>
       </div>
-      <div class="currentTime">
-        <span class="text">Time:</span>
-        <span class="text" id="hour"></span>
-        <span class="text" id="minute"></span>
+      <!-- -------------------------------------------- -->
+      <div class="field">
+        <div class="selectField" id="select">
+          <p id="text">Select only one:</p>
+        </div>
+        <ul class="hide" id="list">
+          <li class="list-item"><span class="option">LinkedIn</span></li>
+          <li class="list-item"><span class="option">GitHub</span></li>
+          <li class="list-item"><span class="option">LeetCode</span></li>
+          <li class="list-item"><span class="option">Replit</span></li>
+        </ul>
       </div>
-    </section>
-    <!-- time container -->
+      <!-- -------------------------------------------- -->
+    </header>
+    <!-- header -->
     <!-- -------------------------------------------- -->
-    <!-- container2 -->
-    <section class="base">
-      <div class="container2" id="content-2"></div>
-    </section>
-    <!-- container2 -->
-    <!-- -------------------------------------------- -->
-    <!-- select menubar -->
-    <div class="field base">
-      <div class="selectField" id="select">
-        <p id="text">Select only one:</p>
-      </div>
-      <ul class="hide" id="list">
-        <li class="list-item"><span class="option">LinkedIn</span></li>
-        <li class="list-item"><span class="option">GitHub</span></li>
-        <li class="list-item"><span class="option">LeetCode</span></li>
-        <li class="list-item"><span class="option">Replit</span></li>
-      </ul>
-    </div>
+    <!-- card-container -->
+    <div class="container base" id="content"></div>
+    <!-- card-container -->
     <!-- -------------------------------------------- -->
   </body>
   <script src="index.js"></script>
