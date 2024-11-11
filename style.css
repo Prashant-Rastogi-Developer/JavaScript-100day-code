@@ -119,7 +119,7 @@ body {
 /* select menubar */
 /* -------------------------------------------- */
 /* dark mode */
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   body {
     color: var(--white);
     background-color: var(--black);
@@ -136,5 +136,5 @@ body {
   .currentTime .text {
     border-bottom: 1px solid yellow;
   }
-}
+} */
 /* -------------------------------------------- */

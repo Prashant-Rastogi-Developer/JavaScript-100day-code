@@ -1,21 +1,18 @@
-console.log("Here is JavaScript Code: ");
-
 // --------------------------------------------
 // Text manipulation
 const text = "The Quick Brown Fox Jumps Over The Lazy Dog.";
-console.log(text);
-// return: The Quick Brown Fox Jumps Over The Lazy Dog.
-console.log(text.split("").reverse().join(""));
-// return: .goD yzaL ehT revO spmuJ xoF nworB kciuQ ehT
-console.log(text.split(" ").reverse().join(" "));
-// return: Dog. Lazy The Over Jumps Fox Brown Quick The
-console.log(text.split("").reverse().join("").split(" ").reverse().join(" "));
-// return: ehT kciuQ nworB xoF spmuJ revO ehT yzaL .goD
-console.log(text.split("").join(" "));
-// return: T h e   Q u i c k   B r o w n   F o x   J u m p s   O v e r   T h e   L a z y   D o g .
+text;
+// The Quick Brown Fox Jumps Over The Lazy Dog.
+text.split("").reverse().join("");
+// .goD yzaL ehT revO spmuJ xoF nworB kciuQ ehT
+text.split(" ").reverse().join(" ");
+// Dog. Lazy The Over Jumps Fox Brown Quick The
+text.split("").reverse().join("").split(" ").reverse().join(" ");
+// ehT kciuQ nworB xoF spmuJ revO ehT yzaL .goD
+text.split("").join(" ");
+// T h e   Q u i c k   B r o w n   F o x   J u m p s   O v e r   T h e   L a z y   D o g .
 // Text manipulation
 // --------------------------------------------
-
 let dataTypes = {
   null: null,
   true: true,
@@ -29,10 +26,18 @@ let dataTypes = {
 // //   return typeof element;
 // });
 for (i in dataTypes) {
-  console.log(i);
+  i;
+  // null
+  // true
+  // number
+  // false
+  // undefined
+  // string
+  // symbol
 }
-// console.log(dataTypes);
-
+dataTypes; // {null: null, true: true, number: 123, false: false, undefined: undefined, …}
+// --------------------------------------------
+// strong prototype
 String.prototype.strong = function () {
   return `<strong>${this}</strong>`;
 };
@@ -43,21 +48,34 @@ String.prototype.tag = function (tagName) {
 };
 // 23-10-24 19:29 wednesday
 // new Function created by me return HTML tag you want
-// for (const [property, key] of Object.(dataTypes)) {
-//   console.log(property, key);
-// }
-
+for (const [property, key] of Object.entries(dataTypes)) {
+  property, key;
+  // null null
+  // true true
+  // number 123
+  // false false
+  // undefined undefined
+  // string text string
+  // symbol Symbol(This is symbol)
+}
 for (const element of Object.values(dataTypes)) {
-  console.log(typeof element);
+  typeof element;
+  // object
+  // boolean
+  // number
+  // boolean
+  // undefined
+  // string
+  // symbol
 }
 // --------------------------------------------
 const number = new Number(700);
-console.log(number);
-console.log(typeof number);
-console.log(number.toString());
-console.log(typeof number.toString());
-console.log(number.toFixed(2));
-console.log(number.toPrecision(4));
+number; // Number {700}
+typeof number; // object
+number.toString(); // 700
+typeof number.toString(); // string
+number.toFixed(2); // 700.00
+number.toPrecision(4); // 700.0
 // --------------------------------------------
 
 function user(name, id) {
@@ -65,14 +83,14 @@ function user(name, id) {
   this.id = id;
 }
 let hitesh = new user("hitesh", "001");
-console.log(hitesh);
+hitesh; // user {name: 'hitesh', id: '001'}
 {
   let entries = Object.entries(hitesh);
   let keys = Object.keys(hitesh);
   let values = Object.values(hitesh);
-  console.log(entries);
-  console.log(keys);
-  console.log(values);
+  entries; // (2) [Array(2), Array(2)]
+  keys; // (2) ['name', 'id']
+  values; // (2) ['hitesh', '001']
 }
 class User {
   constructor(name, id) {
@@ -81,7 +99,7 @@ class User {
   }
 }
 let aayush = new User("aayush", 18);
-console.log(aayush);
+aayush; // User {name: 'aayush', id: 18}
 
 // --------------------------------------------
 // card
@@ -108,13 +126,13 @@ arr.push(false, null, undefined, 100);
 arr.pop();
 arr.shift();
 arr.unshift(10);
-console.log(arr);
-console.log(arr.splice(1, 4));
-console.log(arr);
+arr; // (12) [10, 2, 3, 4, 5, 7, 9, 'string', true, false, null, undefined]
+arr.splice(1, 4); // (4) [2, 3, 4, 5]
+arr; // (8) [10, 7, 9, 'string', true, false, null, undefined]
 arr.sort();
 arr.reverse();
-// arr.fill(1)
-console.log(arr);
+// arr.fill(1) // (8) [1, 1, 1, 1, 1, 1, 1, 1]
+arr; // (8) [undefined, true, 'string', null, false, 9, 7, 10]
 // these methods of array are change the original array
 // --------------------------------------------
 // new Object()
@@ -127,14 +145,14 @@ console.log(arr);
     [sym]: "key1",
     [num]: "num1",
   };
-  console.log("object you see it: ", obj);
+  "object you see it: ", obj; // object you see it:  {700: 'num1', name: 'hitesh', surname: 'chadhary', Symbol(this is a symbol): 'key1'}
 }
 // --------------------------------------------
 // lastCharacter()
 function lastCharacter(string) {
   return string[string.length - 1];
 }
-console.log(lastCharacter("hitesh chadhary"));
+lastCharacter("hitesh chadhary"); // y
 // --------------------------------------------
 // greet()
 function greet(name = "hitesh") {
@@ -149,7 +167,7 @@ function setFirstElement(array, element) {
 }
 {
   const result = setFirstElement;
-  console.log(result([1, 2, 4, 5], 7));
+  result([1, 2, 4, 5], 7); // (4) [7, 2, 4, 5]
 }
 // --------------------------------------------
 // arrayToString()
@@ -159,7 +177,7 @@ function arrayToString(...array) {
 {
   const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, "string", true, false];
   const result = arrayToString(array);
-  console.log(result);
+  result; // 1,2,3,4,5,6,7,8,9,10,string,true,false
 }
 // --------------------------------------------
 // getMiddle()
@@ -168,7 +186,7 @@ function getMiddleValueOfSingleArray(array) {
 }
 {
   const result = getMiddleValueOfSingleArray;
-  console.log(result([1, 2, 3]));
+  result([1, 2, 3]); // 2
 }
 // --------------------------------------------
 // check password
@@ -182,9 +200,9 @@ function enterPassword(password, passwordRepeat) {
   const pwd1 = enterPassword("abcdef", "abcdef");
   const pwd2 = enterPassword("1234567abcd", "1234567abcd");
   const pwd3 = enterPassword("1234567abcd", "abcd1234567");
-  console.log("password1: ", pwd1);
-  console.log("password2: ", pwd2);
-  console.log("password3: ", pwd3);
+  "password1: ", pwd1; // false
+  "password2: ", pwd2; // true
+  "password3: ", pwd3; // false
 }
 // --------------------------------------------
 // true length
@@ -193,11 +211,10 @@ Object.prototype.trueLength = function () {
 };
 {
   const array = [1, 2, 3, , undefined, null, 0, "string", true, false];
-  console.log(
-    `this is if array is convert into a string and trueLength() finds it true length and additional commas ${array.toString()}: ${array
-      .toString()
-      .trueLength()} is length`
-  );
+  `this is if array is convert into a string and trueLength() finds it true length and additional commas ${array.toString()}: ${array
+    .toString()
+    .trueLength()} is length`;
+  // this is if array is convert into a string and trueLength() finds it true length and additional commas 1,2,3,,,,0,string,true,false: 28 is length
 }
 // --------------------------------------------
 // container-2 in DOM
@@ -225,7 +242,7 @@ function randomColor() {
 }
 // --------------------------------------------
 // use of replaceAll()
-console.log(text.split(" ").fill(0).join(" ").replaceAll(0, 7));
+text.split(" ").fill(0).join(" ").replaceAll(0, 7); // 7 7 7 7 7 7 7 7 7
 // --------------------------------------------
 // time container
 const dateElement = document.getElementById(`date`);
