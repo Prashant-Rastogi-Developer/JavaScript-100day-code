@@ -226,6 +226,9 @@ function card(title, text) {
   const cardText = tag(`p`, `card-text`, text);
   card.append(img, cardTitle, cardText);
   img.style.backgroundColor = randomColor();
+  setInterval(() => {
+    img.style.backgroundColor = randomColor();
+  }, 1000);
   img.addEventListener(`mouseover`, function (e) {
     e.target.style.backgroundColor = randomColor();
   });
