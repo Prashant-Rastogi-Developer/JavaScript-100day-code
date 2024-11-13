@@ -200,6 +200,28 @@ Object.prototype.trueLength = function () {
 // use of replaceAll()
 text.split(` `).fill(0).join(` `).replaceAll(0, 7); // 7 7 7 7 7 7 7 7 7
 // --------------------------------------------
+// camelCase()
+function camelCase(str) {
+  let a = str.split(" ");
+  let b = a[0].at(0).toUpperCase() + a[0].slice(1);
+  let c = a[1].at(0).toUpperCase() + a[1].slice(1);
+  return `${b}${c}`;
+
+  // let n = str.split(' ')
+  // let leng = str.split(" ");
+  // for (let i = 0; i < leng; i++) {
+  //   console.log(n);
+  // }
+  // let n = str.split(" ");
+  // for (const element in n) {
+  //   console.log(element);
+  // }
+}
+console.log(camelCase("ecma script"));
+console.log(camelCase("java script"));
+console.log(camelCase("type script"));
+
+// --------------------------------------------
 // start of dom manipulation
 // tag()
 const tag = (tag, className, content) => {
@@ -226,9 +248,9 @@ function card(title, text) {
   const cardText = tag(`p`, `card-text`, text);
   card.append(img, cardTitle, cardText);
   img.style.backgroundColor = randomColor();
-  setInterval(() => {
-    img.style.backgroundColor = randomColor();
-  }, 1000);
+  // setInterval(() => {
+  //   img.style.backgroundColor = randomColor();
+  // }, 1000);
   img.addEventListener(`mouseover`, function (e) {
     e.target.style.backgroundColor = randomColor();
   });
