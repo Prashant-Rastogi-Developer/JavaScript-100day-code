@@ -217,10 +217,24 @@ function camelCase(str) {
   //   console.log(element);
   // }
 }
-console.log(camelCase("ecma script"));
-console.log(camelCase("java script"));
-console.log(camelCase("type script"));
-
+camelCase("ecma script");
+camelCase("java script");
+camelCase("type script");
+// this function is good for execute
+function toCamelCase(str) {
+  return str
+    .split(" ")
+    .map((word, index) => {
+      if (index === 0) return word.toLowerCase();
+      // else: see word, index>0  0,1,2... index;
+      else return word.at(0).toUpperCase() + word.slice(1).toLowerCase();
+    })
+    .join("");
+}
+toCamelCase("java"); // java
+toCamelCase("Java script"); // JavaScript
+toCamelCase("Java script hello world"); // JavaScriptHelloWorld
+toCamelCase("get element by id"); // getElementById
 // --------------------------------------------
 // start of dom manipulation
 // tag()
