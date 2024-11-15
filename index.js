@@ -121,18 +121,18 @@ arr; // (8) [undefined, true, 'string', null, false, 9, 7, 10]
   let num = new Number(700);
   const obj = {
     name: `hitesh`,
-    surname: `chadhary`,
+    surname: `chaudhary`,
     [sym]: `key1`,
     [num]: `num1`,
   };
-  `object you see it: `, obj; // object you see it:  {700: 'num1', name: 'hitesh', surname: 'chadhary', Symbol(this is a symbol): 'key1'}
+  `object you see it: `, obj; // object you see it:  {700: 'num1', name: 'hitesh', surname: 'chaudhary', Symbol(this is a symbol): 'key1'}
 }
 // --------------------------------------------
 // lastCharacter()
 function lastCharacter(string) {
   return string[string.length - 1];
 }
-lastCharacter(`hitesh chadhary`); // y
+lastCharacter(`hitesh chaudhary`); // y
 // --------------------------------------------
 // greet()
 function greet(name = `hitesh`) {
@@ -223,18 +223,30 @@ camelCase("type script");
 // this function is good for execute
 function toCamelCase(str) {
   return str
+    .trim()
     .split(" ")
     .map((word, index) => {
       if (index === 0) return word.toLowerCase();
-      // else: see word, index>0  0,1,2... index;
-      else return word.at(0).toUpperCase() + word.slice(1).toLowerCase();
+      // else: see word if, index>0 || 1, 2, 3... index;
+      else return word.at(0).toUpperCase() + word.slice(1);
     })
     .join("");
 }
 toCamelCase("java"); // java
 toCamelCase("Java script"); // JavaScript
-toCamelCase("Java script hello world"); // JavaScriptHelloWorld
+toCamelCase(" Java script hello world"); // JavaScriptHelloWorld
 toCamelCase("get element by id"); // getElementById
+// --------------------------------------------
+function capitalize(name) {
+  return name
+    .trim()
+    .split(" ")
+    .map((word) => word.at(0).toUpperCase() + word.slice(1))
+    .join(" ");
+}
+capitalize("hitesh chaudhary"); // Hitesh Chaudhary
+capitalize(" developer man "); // Developer Man
+
 // --------------------------------------------
 // start of dom manipulation
 // tag()
