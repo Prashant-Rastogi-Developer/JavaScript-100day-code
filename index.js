@@ -237,6 +237,23 @@ toCamelCase("Java script"); // JavaScript
 toCamelCase(" Java script hello world"); // JavaScriptHelloWorld
 toCamelCase("get element by id"); // getElementById
 // --------------------------------------------
+// switch case values
+let month = 3;
+switch (month) {
+  case 1:
+    "this month of January";
+    break;
+  case 2:
+    "this month of February";
+    break;
+  case 3:
+    "this month of March";
+    break;
+  default:
+    "otherwise return any value";
+    break;
+}
+// --------------------------------------------
 function capitalize(name) {
   return name
     .trim()
