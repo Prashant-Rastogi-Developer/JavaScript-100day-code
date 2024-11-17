@@ -263,7 +263,13 @@ function capitalize(name) {
 }
 capitalize("hitesh chaudhary"); // Hitesh Chaudhary
 capitalize(" developer man "); // Developer Man
-
+// --------------------------------------------
+async function randomUser() {
+  const response = await fetch("https://randomuser.me/api/");
+  const data = await response.json();
+  console.log(data);
+}
+randomUser();
 // --------------------------------------------
 // start of dom manipulation
 // tag()
