@@ -264,12 +264,16 @@ function capitalize(name) {
 capitalize("hitesh chaudhary"); // Hitesh Chaudhary
 capitalize(" developer man "); // Developer Man
 // --------------------------------------------
+// random user function()
 async function randomUser() {
   const response = await fetch("https://randomuser.me/api/");
   const data = await response.json();
-  console.log(data);
+  return data;
 }
 randomUser();
+// --------------------------------------------
+// basic of localStorage
+const storeItem = localStorage.setItem("key", "value");
 // --------------------------------------------
 // start of dom manipulation
 // tag()
