@@ -305,7 +305,9 @@ function card(title, text) {
   //   img.style.backgroundColor = randomColor();
   // }, 1000);
   img.addEventListener(`mouseover`, function (e) {
-    e.target.style.backgroundColor = randomColor();
+    const newColor = randomColor();
+    e.target.style.backgroundColor = newColor;
+    document.body.style.backgroundColor = newColor;
   });
   content.append(card);
 }
