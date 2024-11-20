@@ -373,3 +373,11 @@ Array.from(list.children).forEach((e) => {
 });
 // end of dom manipulation
 // --------------------------------------------
+const input = document.getElementById(`input`);
+input.addEventListener(`input`, (e) => {
+  const changeTitle = document.getElementsByClassName(`card-title`);
+  console.log(e.target.value);
+  Array.from(changeTitle).forEach((element) => {
+    element.innerText = e.target.value;
+  });
+});

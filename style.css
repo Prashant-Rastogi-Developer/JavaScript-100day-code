@@ -75,6 +75,14 @@ body {
 }
 /* time container */
 /* -------------------------------------------- */
+/* input */
+.input-box .input {
+  padding: var(--gap);
+  color: var(--black);
+  border-radius: var(--gap);
+}
+/* input */
+/* -------------------------------------------- */
 /* select menubar */
 .selectField {
   width: 10rem;
