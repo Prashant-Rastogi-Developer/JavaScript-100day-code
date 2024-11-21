@@ -76,7 +76,6 @@ typeof number.toString(); // string
 number.toFixed(2); // 700.00
 number.toPrecision(4); // 700.0
 // --------------------------------------------
-
 function user(name, id) {
   this.name = name;
   this.id = id;
@@ -274,6 +273,12 @@ randomUser();
 // --------------------------------------------
 // basic of localStorage
 const storeItem = localStorage.setItem("key", "value");
+// --------------------------------------------
+// use of filter
+{
+  const arr = [2,3,4,5,6,7,8,9,0,true]
+  console.log(arr.filter((e) => e>4))
+}
 // --------------------------------------------
 // start of dom manipulation
 // tag()
