@@ -135,10 +135,26 @@ body {
   gap: var(--gap);
   overflow: hidden;
   flex-direction: column;
+  position: relative;
   box-shadow: var(--shadow);
   border-radius: var(--gap);
   border: 1px solid #fffffe40;
   background-image: linear-gradient(to top left, wheat, var(--white));
+}
+.card .close {
+  scale: 0.8;
+  right: 1rem;
+  cursor: pointer;
+  border-radius: 50%;
+  position: absolute;
+  padding: var(--gap);
+  border: 3px solid #121212;
+  transition: var(--transition);
+  background-color: var(--white);
+}
+.card .close:hover {
+  scale: 1;
+  background-color: var(--white);
 }
 /* -------------------------------------------- */
 .card .item {

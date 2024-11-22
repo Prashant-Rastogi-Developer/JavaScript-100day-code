@@ -276,8 +276,8 @@ const storeItem = localStorage.setItem("key", "value");
 // --------------------------------------------
 // use of filter
 {
-  const arr = [2,3,4,5,6,7,8,9,0,true]
-  console.log(arr.filter((e) => e>4))
+  const arr = [2, 3, 4, 5, 6, 7, 8, 9, 0, true];
+  arr.filter((e) => e > 4); // (5) [5, 6, 7, 8, 9]
 }
 // --------------------------------------------
 // start of dom manipulation
@@ -301,19 +301,21 @@ function randomColor() {
 const content = document.getElementById(`content`);
 function card(title, text) {
   const card = tag(`article`, `card`, ``);
+  const span = document.createElement(`span`);
   const img = tag(`div`, `item`, ``);
   const cardTitle = tag(`h3`, `card-title`, title);
   const cardText = tag(`p`, `card-text`, text);
-  card.append(img, cardTitle, cardText);
+  span.className = "close";
+  span.addEventListener(`click`, (e) => {
+    e.target.parentElement.remove();
+  });
   img.style.backgroundColor = randomColor();
-  // setInterval(() => {
-  //   img.style.backgroundColor = randomColor();
-  // }, 1000);
   img.addEventListener(`mouseover`, function (e) {
     const newColor = randomColor();
     e.target.style.backgroundColor = newColor;
     document.body.style.backgroundColor = newColor;
   });
+  card.append(span, img, cardTitle, cardText);
   content.append(card);
 }
 // card(`Box-1`, text);
