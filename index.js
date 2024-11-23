@@ -279,6 +279,10 @@ const storeItem = localStorage.setItem("key", "value");
   const arr = [2, 3, 4, 5, 6, 7, 8, 9, 0, true];
   arr.filter((e) => e > 4); // (5) [5, 6, 7, 8, 9]
 }
+{
+  const arr = [1, 2, 3, 4, 5];
+  console.log(arr.map((e) => e * 4)); // (5) [4, 8, 12, 16, 20]
+}
 // --------------------------------------------
 // start of dom manipulation
 // tag()
