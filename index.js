@@ -281,7 +281,11 @@ const storeItem = localStorage.setItem("key", "value");
 }
 {
   const arr = [1, 2, 3, 4, 5];
-  console.log(arr.map((e) => e * 4)); // (5) [4, 8, 12, 16, 20]
+  arr.map((e) => e * 4); // (5) [4, 8, 12, 16, 20]
+}
+{
+  const arr = [1, 2, true, false, true, true, true, 2, 3, 4, 4, 5];
+  arr.reduce((previousValue, currentValue) => previousValue + currentValue, 0); // 25 true = 1, false 0
 }
 // --------------------------------------------
 // start of dom manipulation
