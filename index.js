@@ -292,7 +292,8 @@ const storeItem = localStorage.setItem("key", "value");
     name: "hitesh",
     id: 1,
   };
-  const { name, id } = obj(name, id); // hitesh 1
+  const { name, id } = obj;
+  name, id; // hitesh 1
 }
 // --------------------------------------------
 // start of dom manipulation
