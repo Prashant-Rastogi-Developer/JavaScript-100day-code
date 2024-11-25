@@ -287,6 +287,13 @@ const storeItem = localStorage.setItem("key", "value");
   const arr = [1, 2, true, false, true, true, true, 2, 3, 4, 4, 5];
   arr.reduce((previousValue, currentValue) => previousValue + currentValue, 0); // 25 true = 1, false 0
 }
+{
+  const obj = {
+    name: "hitesh",
+    id: 1,
+  };
+  const { name, id } = obj(name, id); // hitesh 1
+}
 // --------------------------------------------
 // start of dom manipulation
 // tag()
