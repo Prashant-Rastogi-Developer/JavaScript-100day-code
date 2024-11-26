@@ -295,6 +295,11 @@ const storeItem = localStorage.setItem("key", "value");
   const { name, id } = obj;
   name, id; // hitesh 1
 }
+{
+  let channelName = 'CODE with HaRRy'
+  channelName.toLowerCase() // code with harry
+  channelName.toUpperCase() // CODE WITH HARRY
+}
 // --------------------------------------------
 // start of dom manipulation
 // tag()
