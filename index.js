@@ -381,26 +381,27 @@ hourElement.textContent = current.getHours();
 minuteElement.textContent = current.getMinutes();
 // time container
 // --------------------------------------------
-// select menubar
-const select = document.getElementById(`select`);
-const inputText = document.getElementById(`text`);
-const list = document.getElementById(`list`);
-select.addEventListener(`click`, function () {
-  list.classList.toggle(`hide`);
-});
-Array.from(list.children).forEach((e) => {
-  e.addEventListener(`click`, function (event) {
-    inputText.innerText = event.target.innerText;
-    list.classList.toggle(`hide`);
-  });
-});
-// end of dom manipulation
-// --------------------------------------------
+// input
 const input = document.getElementById(`input`);
 input.addEventListener(`input`, (e) => {
   const changeTitle = document.getElementsByClassName(`card-title`);
-  console.log(e.target.value);
+  // e.target.value;
   Array.from(changeTitle).forEach((element) => {
     element.innerText = e.target.value;
   });
 });
+// --------------------------------------------
+// dropdown menubar
+const dropdownButton = document.getElementById(`dropbtn`);
+const dropdownContent = document.getElementById(`dropdown-content`);
+dropdownButton.addEventListener(`mouseover`, () => {
+  dropdownContent.classList.toggle(`show`);
+});
+Array.from(dropdownContent.children).forEach((item) => {
+  item.addEventListener(`click`, (event) => {
+    dropdownButton.innerText = item.innerText;
+    dropdownContent.classList.toggle(`show`);
+  });
+});
+// end of dom manipulation
+// --------------------------------------------

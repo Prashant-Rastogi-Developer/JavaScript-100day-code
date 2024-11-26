@@ -45,6 +45,7 @@ body {
   gap: 0.25rem;
   display: flex;
   position: sticky;
+  flex-wrap: wrap;
   font-weight: 700;
   align-items: center;
   padding: var(--gap) 1.5rem;
@@ -87,36 +88,37 @@ body {
 /* input */
 /* -------------------------------------------- */
 /* select menubar */
-.selectField {
-  width: 10rem;
+.dropbtn {
+  padding: var(--gap);
+  border-radius: var(--gap);
+  background-color: wheat;
+}
+.dropdown {
+  position: relative;
+}
+.dropdown-content {
+  z-index: 2;
+  right: 1rem;
+  display: none;
+  position: absolute;
+  box-shadow: var(--shadow);
+  border-radius: var(--gap);
+  backdrop-filter: var(--blur);
+  -webkit-backdrop-filter: var(--blur);
+}
+.dropdown-content .dropdown-item {
+  display: block;
   cursor: pointer;
   margin: var(--gap);
   padding: var(--gap);
-  background-color: wheat;
-}
-#list {
-  gap: 1rem;
-  width: 15rem;
-  display: grid;
-  padding: 1rem;
-  margin: var(--gap);
   border-radius: var(--gap);
-  background-color: #fffffe40;
+  box-shadow: var(--shadow);
 }
-.list-item {
-  cursor: pointer;
-  padding: 1rem;
-  background-color: #fffffe40;
-}
-.list-item:hover {
+.dropdown-content .dropdown-item:hover {
   background-color: wheat;
 }
-.hide {
-  /* visibility: hidden; */
-  /* display: none; */
-}
-.field #list {
-  display: none;
+.show {
+  display: block;
 }
 /* header */
 /* -------------------------------------------- */
