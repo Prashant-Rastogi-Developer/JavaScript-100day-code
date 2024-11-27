@@ -296,9 +296,15 @@ const storeItem = localStorage.setItem("key", "value");
   name, id; // hitesh 1
 }
 {
-  let channelName = 'CODE with HaRRy'
-  channelName.toLowerCase() // code with harry
-  channelName.toUpperCase() // CODE WITH HARRY
+  const channelName = "CODE with HaRRy";
+  channelName.toLowerCase(); // code with harry
+  channelName.toUpperCase(); // CODE WITH HARRY
+}
+{
+  const num = [2, 1, 2, 4, 5];
+  const num2 = [...num, 34, 4, 4];
+  num2;
+  // the other mehtod of spread an array in another variable to store
 }
 // --------------------------------------------
 // start of dom manipulation
