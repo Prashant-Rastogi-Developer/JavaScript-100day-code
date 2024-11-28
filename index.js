@@ -316,7 +316,7 @@ const storeItem = localStorage.setItem("key", "value");
     }
   });
   createPromise
-    .then((message) => console.log(message)) // Congrats! you resolved this problem.
+    .then((message) => message) // Congrats! you resolved this problem.
     .catch((error) => {
       `Error: ${error.message}`; // Error: You have received a rejected message.
       `Error Type: ${error.name}`; // Error Type: Error
@@ -324,7 +324,7 @@ const storeItem = localStorage.setItem("key", "value");
   async function handlePromise() {
     try {
       const message = await createPromise;
-      console.log(message); // Congrats! you resolved this problem.
+      message; // Congrats! you resolved this problem.
     } catch (error) {
       `Error: ${error.message}`; // Error: You have received a rejected message.
       `Error Type: ${error.name}`; // Error Type: Error
