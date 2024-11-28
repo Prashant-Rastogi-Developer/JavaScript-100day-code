@@ -306,6 +306,32 @@ const storeItem = localStorage.setItem("key", "value");
   num2;
   // the other mehtod of spread an array in another variable to store
 }
+{
+  const createPromise = new Promise((resolve, reject) => {
+    const num = 3;
+    if (num == 3) {
+      resolve("Congrats! you resolved this problem.");
+    } else {
+      reject(new Error("You have received a rejected message."));
+    }
+  });
+  createPromise
+    .then((message) => console.log(message)) // Congrats! you resolved this problem.
+    .catch((error) => {
+      `Error: ${error.message}`; // Error: You have received a rejected message.
+      `Error Type: ${error.name}`; // Error Type: Error
+    });
+  async function handlePromise() {
+    try {
+      const message = await createPromise;
+      console.log(message); // Congrats! you resolved this problem.
+    } catch (error) {
+      `Error: ${error.message}`; // Error: You have received a rejected message.
+      `Error Type: ${error.name}`; // Error Type: Error
+    }
+  }
+  handlePromise();
+}
 // --------------------------------------------
 // start of dom manipulation
 // tag()
