@@ -332,6 +332,20 @@ const storeItem = localStorage.setItem("key", "value");
   }
   handlePromise();
 }
+// Closure concept
+{
+  function init() {
+    const name = "hitesh";
+    name; // first log: hitesh
+    function sayFirstName() {
+      name; // second log: hitesh
+    }
+    return sayFirstName;
+  }
+  const result = init(); // hitesh;
+  const result2 = init()(); // hitesh hitesh
+  result(); // hitesh hitesh
+}
 // --------------------------------------------
 // start of dom manipulation
 // tag()
