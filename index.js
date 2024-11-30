@@ -346,6 +346,14 @@ const storeItem = localStorage.setItem("key", "value");
   const result2 = init()(); // hitesh hitesh
   result(); // hitesh hitesh
 }
+// check odd or even
+{
+  function oddOrEven(number) {
+    return number % 2 === 0 ? "even" : "odd";
+  }
+  oddOrEven(2); // even
+  oddOrEven(3); // odd
+}
 // --------------------------------------------
 // start of dom manipulation
 // tag()
