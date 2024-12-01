@@ -362,6 +362,21 @@ const storeItem = localStorage.setItem("key", "value");
   areaOfRectangle(200, 30); // 6000
 }
 // --------------------------------------------
+// reverse string by using loop
+function reverseString(str) {
+  str = String(str);
+  let result = ``;
+  for (let i = str.length - 1; i >= 0; i--) {
+    result += str[i];
+  }
+  return result;
+}
+reverseString("ashish"); // hsihsa
+reverseString(49393); // 39394
+reverseString(true); // eurt
+reverseString(undefined); // denifednu
+reverseString(null); // llun
+// --------------------------------------------
 // start of dom manipulation
 // tag()
 const tag = (tag, className, content) => {
