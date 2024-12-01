@@ -355,6 +355,13 @@ const storeItem = localStorage.setItem("key", "value");
   oddOrEven(3); // odd
 }
 // --------------------------------------------
+// Formula: Area = length * width
+{
+  const areaOfRectangle = (length, width) =>
+    `${Number(length) * Number(width)}`;
+  areaOfRectangle(200, 30); // 6000
+}
+// --------------------------------------------
 // start of dom manipulation
 // tag()
 const tag = (tag, className, content) => {
