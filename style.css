@@ -28,10 +28,6 @@ html {
 body {
   font-family: Arial, Helvetica, sans-serif;
 }
-html,
-body {
-  width: 100%;
-}
 .base {
   padding: var(--gap);
   margin: 2rem 1.5rem;
@@ -48,34 +44,32 @@ body {
   flex-wrap: wrap;
   font-weight: 700;
   align-items: center;
-  padding: var(--gap) 1.5rem;
+  padding: var(--gap);
   background-color: #fffffe20;
   justify-content: space-between;
   backdrop-filter: var(--blur);
   -webkit-backdrop-filter: var(--blur);
   box-shadow: 0 1rem 1rem #12121220, inset 0 -1rem 1rem #fffffe20;
 }
-/* @media screen and (max-width: 425px){
-  .header {
-    display: block;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-  }
-} */
 /* -------------------------------------------- */
 /* time container */
 .currentDate,
 .currentTime {
   display: flex;
   gap: var(--gap);
-  font-size: 2rem;
+  /* font-size: 1rem; */
+  font-size: clamp(1rem, 1rem + 10vw, 1rem);
   text-transform: capitalize;
 }
 .currentDate .text,
 .currentTime .text {
   padding: var(--gap);
   border-bottom: 1px solid #ff0000;
+}
+@media screen and (max-width: 725px){
+  .currentDate, .input-box, .dropbtn{
+    display: none;
+  }
 }
 /* time container */
 /* -------------------------------------------- */
@@ -129,12 +123,12 @@ body {
   flex-wrap: wrap;
   align-items: center;
   flex-direction: row;
+  flex-grow: 1;
 }
 .card {
-  width: 18rem;
-  display: flex;
   padding: 1rem;
   gap: var(--gap);
+  margin: 1rem 0;
   overflow: hidden;
   flex-direction: column;
   position: relative;
@@ -160,8 +154,8 @@ body {
 }
 /* -------------------------------------------- */
 .card .item {
-  height: 10rem;
   cursor: pointer;
+  min-height: 10rem;
   border-radius: var(--gap);
 }
 /* -------------------------------------------- */
