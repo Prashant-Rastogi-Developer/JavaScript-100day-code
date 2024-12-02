@@ -377,6 +377,17 @@ reverseString(true); // eurt
 reverseString(undefined); // denifednu
 reverseString(null); // llun
 // --------------------------------------------
+function factorial(n) {
+  let result = 1;
+  for (let i = 1; i <= n; i++) {
+    result *= i;
+  }
+  return result;
+}
+factorial(5); // 120
+factorial(7); // 5040
+
+// --------------------------------------------
 // start of dom manipulation
 // tag()
 const tag = (tag, className, content) => {
