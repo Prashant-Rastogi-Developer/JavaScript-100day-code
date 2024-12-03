@@ -386,7 +386,11 @@ function factorial(n) {
 }
 factorial(5); // 120
 factorial(7); // 5040
-
+// --------------------------------------------
+function httpToHttps(url) {
+  return url.replace("http", "https");
+}
+httpToHttps("http://www.google.com"); // https://www.google.com
 // --------------------------------------------
 // start of dom manipulation
 // tag()
