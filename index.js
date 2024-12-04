@@ -501,3 +501,24 @@ Array.from(dropdownContent.children).forEach((item) => {
 });
 // end of dom manipulation
 // --------------------------------------------
+// clock
+const hourArrow = document.getElementById(`hourArrow`);
+const minuteArrow = document.getElementById(`minuteArrow`);
+const secondArrow = document.getElementById(`secondArrow`);
+function analog() {
+  const date = new Date();
+  const hour = date.getHours();
+  const minutes = date.getMinutes();
+  const seconds = date.getSeconds();
+
+  const hourRotation = 30 * hour + minutes / 2;
+  const minutesRotation = 6 * minutes;
+  const secondsRotation = 6 * seconds;
+
+  hourArrow.style.transform = `rotate(${hourRotation}deg)`;
+  minuteArrow.style.transform = `rotate(${minutesRotation}deg)`;
+  secondArrow.style.transform = `rotate(${secondsRotation}deg)`;
+}
+setInterval(analog, 1000);
+
+// --------------------------------------------

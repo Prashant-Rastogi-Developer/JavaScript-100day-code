@@ -19,7 +19,7 @@
   color: currentColor;
   text-decoration: none;
   box-sizing: border-box;
-  transition: var(--transition);
+  /* transition: var(--transition); */
   font-family: "Poppins", "sans-serif";
 }
 html {
@@ -27,6 +27,7 @@ html {
 }
 body {
   font-family: Arial, Helvetica, sans-serif;
+  transition: var(--transition);
 }
 .base {
   padding: var(--gap);
@@ -66,8 +67,10 @@ body {
   padding: var(--gap);
   border-bottom: 1px solid #ff0000;
 }
-@media screen and (max-width: 725px){
-  .currentDate, .input-box, .dropbtn{
+@media screen and (max-width: 725px) {
+  .currentDate,
+  .input-box,
+  .dropbtn {
     display: none;
   }
 }
@@ -137,6 +140,9 @@ body {
   border: 1px solid #fffffe40;
   background-image: linear-gradient(to top left, wheat, var(--white));
 }
+.card .item {
+  transition: var(--transition);
+}
 .card .close {
   scale: 0.8;
   right: 1rem;
@@ -187,4 +193,57 @@ body {
     border-bottom: 1px solid yellow;
   }
 }
+/* -------------------------------------------- */
+/* clock */
+.clock {
+  margin: 0 auto;
+  border-radius: 50%;
+  position: relative;
+  --size: 20rem;
+  width: var(--size);
+  height: var(--size);
+  background-color: var(--white);
+  background-image: url("src/clock-face-2879896_1280.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+}
+.pointer {
+  padding: var(--gap);
+  background-color: var(--black);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  border-radius: 50%;
+}
+.arrow {
+  position: absolute;
+  border-radius: 10px;
+  left: 50%;
+  top: 50%;
+  transform-origin: bottom;
+}
+.hourArrow {
+  height: 5rem;
+  width: 0.7rem;
+  top: 5.2rem;
+  left: 9.7rem;
+  background-color: var(--black);
+}
+.minuteArrow {
+  height: 6rem;
+  width: 0.8rem;
+  top: 4rem;
+  left: 9.6rem;
+  background-color: #444444;
+}
+.secondArrow {
+  height: 8rem;
+  width: 0.3rem;
+  top: 2rem;
+  left: 9.9rem;
+  background-color: #ff0000;
+}
+/* clock */
 /* -------------------------------------------- */
