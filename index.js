@@ -487,6 +487,26 @@ input.addEventListener(`input`, (e) => {
   });
 });
 // --------------------------------------------
+// notification
+const notification = document.getElementById(`notification`);
+const toastContent = document.getElementById("toastContent");
+function toast() {
+  const span = tag("span", "notification-item", "");
+  const closeBtn = tag("span", "close", "");
+  const p = tag("p", "text", "You received this message");
+  closeBtn.addEventListener(`click`, (e) => {
+    e.target.parentElement.remove();
+  });
+  setTimeout(() => {
+    span.remove();
+  }, 3000);
+  span.append(closeBtn, p);
+  toastContent.append(span);
+}
+notification.addEventListener(`click`, (e) => {
+  toast();
+});
+// --------------------------------------------
 // dropdown menubar
 const dropdownButton = document.getElementById(`dropbtn`);
 const dropdownContent = document.getElementById(`dropdown-content`);

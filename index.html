@@ -17,7 +17,6 @@
     <!-- -------------------------------------------- -->
     <!-- header -->
     <header class="header">
-      <!-- -------------------------------------------- -->
       <div class="currentTime">
         <span class="text">Time:</span>
         <span class="text" id="hour"></span>
@@ -30,6 +29,7 @@
         <span class="text" id="month"></span>
         <span class="text" id="year"></span>
       </div>
+      <!-- -------------------------------------------- -->
       <div class="input-box">
         <input
           type="text"
@@ -38,6 +38,16 @@
           placeholder="enter any text"
         />
       </div>
+      <!-- -------------------------------------------- -->
+      <button type="button" class="btn notification" id="notification">
+        <img
+          class="figure-img"
+          src="https://static.vecteezy.com/system/resources/previews/009/394/760/non_2x/bell-icon-transparent-notification-free-png.png"
+          alt="notification"
+          title="notification"
+        />
+        <span class="badge">7</span>
+      </button>
       <!-- -------------------------------------------- -->
       <div class="dropdown">
         <button class="dropbtn" id="dropbtn">Select only one:</button>
@@ -48,19 +58,21 @@
           <li href="#" class="dropdown-item">Replit</li>
         </ul>
       </div>
-      <!-- -------------------------------------------- -->
     </header>
+    <!-- -------------------------------------------- -->
+    <!-- toast-container -->
+    <div id="toastContent"></div>
     <!-- -------------------------------------------- -->
     <!-- card-container -->
     <div class="container base" id="content"></div>
     <!-- -------------------------------------------- -->
     <!-- clock -->
-      <div class="clock">
-        <div class="pointer"></div>
-        <div class="hourArrow arrow" id="hourArrow"></div>
-        <div class="minuteArrow arrow" id="minuteArrow"></div>
-        <div class="secondArrow arrow" id="secondArrow"></div>
-      </div>
+    <div class="clock">
+      <div class="pointer"></div>
+      <div class="hourArrow arrow" id="hourArrow"></div>
+      <div class="minuteArrow arrow" id="minuteArrow"></div>
+      <div class="secondArrow arrow" id="secondArrow"></div>
+    </div>
     <!-- -------------------------------------------- -->
   </body>
   <script src="index.js"></script>
