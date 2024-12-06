@@ -75,6 +75,21 @@ body {
   }
 }
 /* -------------------------------------------- */
+/* dark mode button */
+.header .darkBtn {
+  cursor: pointer;
+  padding: var(--gap);
+  color: var(--white);
+  border-radius: var(--gap);
+  transition: var(--transition);
+  background-color: var(--black);
+}
+.header .darkBtn:active {
+  scale: 0.9;
+  color: var(--black);
+  background-color: var(--white);
+}
+/* -------------------------------------------- */
 /* input */
 .input-box .input {
   padding: var(--gap);

@@ -475,7 +475,12 @@ monthElement.textContent = monthName[current.getMonth()];
 yearElement.textContent = current.getFullYear();
 hourElement.textContent = current.getHours();
 minuteElement.textContent = current.getMinutes();
-// time container
+// --------------------------------------------
+// dark mode button
+const darkBtn = document.getElementById(`darkBtn`);
+darkBtn.addEventListener(`click`, (e) => {
+  document.body.style.backgroundColor = "var(--black)";
+});
 // --------------------------------------------
 // input
 const input = document.getElementById(`input`);
