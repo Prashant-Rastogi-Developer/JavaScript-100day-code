@@ -392,12 +392,23 @@ function httpToHttps(url) {
 }
 httpToHttps("http://www.google.com"); // https://www.google.com
 // --------------------------------------------
+load();
+function load() {
+  const color = localStorage.getItem("color");
+  if (color) {
+    document.body.style.backgroundColor = color;
+  }
+}
+function save() {
+  localStorage.setItem("color", document.body.style.backgroundColor);
+}
+// --------------------------------------------
 // start of dom manipulation
 // tag()
-const tag = (tag, className, content) => {
-  const element = document.createElement(tag);
+const createElement = (tagName, className, textContent) => {
+  const element = document.createElement(tagName);
   element.className = className;
-  element.appendChild(document.createTextNode(content));
+  if (textContent) element.appendChild(document.createTextNode(textContent));
   return element;
 };
 // --------------------------------------------
@@ -411,21 +422,22 @@ function randomColor() {
 // --------------------------------------------
 // card()
 const content = document.getElementById(`content`);
-function card(title, text) {
-  const card = tag(`article`, `card`, ``);
+function createCard(title, text) {
+  const card = createElement(`article`, `card`);
   const span = document.createElement(`span`);
-  const img = tag(`div`, `item`, ``);
-  const cardTitle = tag(`h3`, `card-title`, title);
-  const cardText = tag(`p`, `card-text`, text);
+  const img = createElement(`div`, `item`);
+  const cardTitle = createElement(`h3`, `card-title`, title);
+  const cardText = createElement(`p`, `card-text`, text);
   span.className = "close";
   span.addEventListener(`click`, (e) => {
     e.target.parentElement.remove();
   });
   img.style.backgroundColor = randomColor();
-  img.addEventListener(`mouseover`, function (e) {
+  img.addEventListener(`click`, function (e) {
     const newColor = randomColor();
     e.target.style.backgroundColor = newColor;
     document.body.style.backgroundColor = newColor;
+    save();
   });
   card.append(span, img, cardTitle, cardText);
   content.append(card);
@@ -433,8 +445,8 @@ function card(title, text) {
 // card(`Box-1`, text);
 // card(`Box-2`, text);
 // card(`Box-3`, text);
-for (let i = 1; i <= 7; i++) {
-  card(`Box-${i}`, text);
+for (let i = 1; i <= 5; i++) {
+  createCard(`Box-${i}`, text);
 }
 // --------------------------------------------
 // time container
@@ -469,12 +481,14 @@ const monthName = [
   `December`,
 ];
 const current = new Date();
-dateElement.textContent = current.getDate();
-dayElement.textContent = weekDays[current.getDay()];
-monthElement.textContent = monthName[current.getMonth()];
-yearElement.textContent = current.getFullYear();
-hourElement.textContent = current.getHours();
-minuteElement.textContent = current.getMinutes();
+dateElement.appendChild(document.createTextNode(current.getDate()));
+dayElement.appendChild(document.createTextNode(weekDays[current.getDay()]));
+monthElement.appendChild(
+  document.createTextNode(monthName[current.getMonth()])
+);
+yearElement.appendChild(document.createTextNode(current.getFullYear()));
+hourElement.appendChild(document.createTextNode(current.getHours()));
+minuteElement.appendChild(document.createTextNode(current.getMinutes()));
 // --------------------------------------------
 // dark mode button
 const darkBtn = document.getElementById(`darkBtn`);
@@ -486,7 +500,6 @@ darkBtn.addEventListener(`click`, (e) => {
 const input = document.getElementById(`input`);
 input.addEventListener(`input`, (e) => {
   const changeTitle = document.getElementsByClassName(`card-title`);
-  // e.target.value;
   Array.from(changeTitle).forEach((element) => {
     element.innerText = e.target.value;
   });
@@ -496,9 +509,9 @@ input.addEventListener(`input`, (e) => {
 const notification = document.getElementById(`notification`);
 const toastContent = document.getElementById("toastContent");
 function toast() {
-  const span = tag("span", "notification-item", "");
-  const closeBtn = tag("span", "close", "");
-  const p = tag("p", "text", "You received this message");
+  const span = createElement("span", "notification-item");
+  const closeBtn = createElement("span", "close");
+  const p = createElement("p", "text", "You received this message");
   closeBtn.addEventListener(`click`, (e) => {
     e.target.parentElement.remove();
   });
@@ -524,7 +537,6 @@ Array.from(dropdownContent.children).forEach((item) => {
     dropdownContent.classList.toggle(`show`);
   });
 });
-// end of dom manipulation
 // --------------------------------------------
 // clock
 const hourArrow = document.getElementById(`hourArrow`);
@@ -545,5 +557,4 @@ function analog() {
   secondArrow.style.transform = `rotate(${secondsRotation}deg)`;
 }
 setInterval(analog, 1000);
-
 // --------------------------------------------
