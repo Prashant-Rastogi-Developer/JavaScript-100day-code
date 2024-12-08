@@ -371,11 +371,11 @@ function reverseString(str) {
   }
   return result;
 }
-reverseString("ashish"); // hsihsa
-reverseString(49393); // 39394
-reverseString(true); // eurt
-reverseString(undefined); // denifednu
-reverseString(null); // llun
+reverseString("ashish");  // hsihsa
+reverseString(49393);  // 39394
+reverseString(true);  // eurt
+reverseString(undefined);  // denifednu
+reverseString(null);  // llun
 // --------------------------------------------
 function factorial(n) {
   let result = 1;
@@ -402,6 +402,17 @@ function load() {
 function save() {
   localStorage.setItem("color", document.body.style.backgroundColor);
 }
+// --------------------------------------------
+// single space between string using for loop
+function singleSpaceBetweenString(str) {
+  str = String(str);
+  let result = ``;
+  for (let i = 0; i <= str.length - 1; i++) {
+    result += `${str[i]} `;
+  }
+  return result;
+}
+singleSpaceBetweenString("hello world"); // h e l l o   w o r l d
 // --------------------------------------------
 // start of dom manipulation
 // tag()
