@@ -371,11 +371,11 @@ function reverseString(str) {
   }
   return result;
 }
-reverseString("ashish");  // hsihsa
-reverseString(49393);  // 39394
-reverseString(true);  // eurt
-reverseString(undefined);  // denifednu
-reverseString(null);  // llun
+reverseString("ashish"); // hsihsa
+reverseString(49393); // 39394
+reverseString(true); // eurt
+reverseString(undefined); // denifednu
+reverseString(null); // llun
 // --------------------------------------------
 function factorial(n) {
   let result = 1;
@@ -509,11 +509,13 @@ darkBtn.addEventListener(`click`, (e) => {
 // --------------------------------------------
 // input
 const input = document.getElementById(`input`);
-input.addEventListener(`input`, (e) => {
-  const changeTitle = document.getElementsByClassName(`card-title`);
-  Array.from(changeTitle).forEach((element) => {
-    element.innerText = e.target.value;
-  });
+input.addEventListener(`keyup`, (e) => {
+  if (e.key === "Enter") {
+    const changeTitle = document.getElementsByClassName(`card-title`);
+    Array.from(changeTitle).forEach((element) => {
+      element.innerText = e.target.value;
+    });
+  }
 });
 // --------------------------------------------
 // notification
