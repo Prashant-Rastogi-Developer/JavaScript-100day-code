@@ -537,6 +537,25 @@ notification.addEventListener(`click`, (e) => {
   toast();
 });
 // --------------------------------------------
+// login-btn
+const loginBtn = document.getElementById(`loginBtn`);
+function modal() {
+  const element = createElement(`div`, "modal", "Sample Modal");
+  const closeBtn = createElement(`span`, "closeBtn");
+  closeBtn.addEventListener(`click`, (e) => {
+    e.target.parentElement.remove();
+  });
+  element.appendChild(closeBtn);
+  document.body.append(element);
+  return element;
+}
+loginBtn.addEventListener(`click`, (e) => {
+  e.preventDefault();
+  modal();
+  e.preventDefault();
+  console.log(e.target);
+});
+// --------------------------------------------
 // dropdown menubar
 const dropdownButton = document.getElementById(`dropbtn`);
 const dropdownContent = document.getElementById(`dropdown-content`);

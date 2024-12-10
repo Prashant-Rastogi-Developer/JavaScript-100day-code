@@ -165,11 +165,56 @@ body {
   } */
 }
 /* -------------------------------------------- */
+/* login button */
+.login-btn {
+  padding: var(--gap);
+  border-radius: var(--gap);
+  color: var(--black);
+  font-weight: bold;
+  cursor: pointer;
+  transition: var(--transition);
+  letter-spacing: 1px;
+}
+.login-btn:hover {
+  color: var(--white);
+  background-color: var(--black);
+}
+.modal {
+  padding: var(--gap);
+  background-color: var(--white);
+  width: 20rem;
+  color: var(--black);
+  position: fixed;
+  min-height: 20rem;
+  display: flex;
+  border-radius: var(--gap);
+  align-items: center;
+  justify-content: center;
+  top: 50%;
+  left: 50%;
+  box-shadow: var(--shadow);
+  z-index: 5;
+  transform: translate(-50%, -50%);
+}
+.modal::after {
+  content: "";
+  position: fixed;
+  z-index: -3;
+  width: 100vw;
+  height: 100vw;
+  background-color: #12121230;
+}
+.modal .closeBtn {
+  top: 1rem;
+  background-color: red;
+  padding: var(--gap);
+}
+/* -------------------------------------------- */
 /* select menubar */
 .dropbtn {
   padding: var(--gap);
   border-radius: var(--gap);
-  background-color: wheat;
+  background-color: var(--black);
 }
 .dropdown {
   position: relative;
@@ -223,6 +268,7 @@ body {
 .card .item {
   transition: var(--transition);
 }
+.closeBtn,
 .card .close {
   scale: 0.8;
   right: 1rem;
@@ -234,6 +280,7 @@ body {
   transition: var(--transition);
   background-color: var(--white);
 }
+.closeBtn,
 .card .close:hover,
 .notification-item .close:hover {
   scale: 1;
