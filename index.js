@@ -435,11 +435,10 @@ function randomColor() {
 const content = document.getElementById(`content`);
 function createCard(title, text) {
   const card = createElement(`article`, `card`);
-  const span = document.createElement(`span`);
+  const span = createElement(`span`, "close");
   const img = createElement(`div`, `item`);
   const cardTitle = createElement(`h3`, `card-title`, title);
   const cardText = createElement(`p`, `card-text`, text);
-  span.className = "close";
   span.addEventListener(`click`, (e) => {
     e.target.parentElement.remove();
   });
