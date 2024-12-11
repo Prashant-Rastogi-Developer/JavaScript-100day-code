@@ -414,6 +414,32 @@ function singleSpaceBetweenString(str) {
 }
 singleSpaceBetweenString("hello world"); // h e l l o   w o r l d
 // --------------------------------------------
+//
+class CreateUser {
+  constructor(firstName, lastName, age, designation) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.age = age;
+    this.designation = designation;
+  }
+  getFullName() {
+    return `${this.firstName} ${this.lastName}`;
+  }
+  getBirthYear() {
+    return new Date().getFullYear() - this.age;
+  }
+}
+const userVikas = new CreateUser("Vikas", "Gangwar", "20", "Manager");
+userVikas;
+// CreateUser {firstName: 'Vikas', lastName: 'Gangwar', age: '20', designation: 'Manager'}
+{
+  const color = ["red", "green", "blue"];
+  const [a, b, c] = color;
+  a, b, c; // red green blue
+  const [, , getColor] = color;
+  getColor; // blue
+}
+// --------------------------------------------
 // start of dom manipulation
 // tag()
 const createElement = (tagName, className, textContent) => {
