@@ -414,7 +414,7 @@ function singleSpaceBetweenString(str) {
 }
 singleSpaceBetweenString("hello world"); // h e l l o   w o r l d
 // --------------------------------------------
-//
+// CreateUser class
 class CreateUser {
   constructor(firstName, lastName, age, designation) {
     this.firstName = firstName;
