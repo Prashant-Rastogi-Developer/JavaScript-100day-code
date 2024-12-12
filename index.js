@@ -530,6 +530,7 @@ minuteElement.appendChild(document.createTextNode(current.getMinutes()));
 const darkBtn = document.getElementById(`darkBtn`);
 darkBtn.addEventListener(`click`, (e) => {
   document.body.style.backgroundColor = "var(--black)";
+  save()
 });
 // --------------------------------------------
 // input
