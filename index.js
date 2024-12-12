@@ -530,7 +530,7 @@ minuteElement.appendChild(document.createTextNode(current.getMinutes()));
 const darkBtn = document.getElementById(`darkBtn`);
 darkBtn.addEventListener(`click`, (e) => {
   document.body.style.backgroundColor = "var(--black)";
-  save()
+  save();
 });
 // --------------------------------------------
 // input
@@ -613,6 +613,13 @@ function analog() {
   hourArrow.style.transform = `rotate(${hourRotation}deg)`;
   minuteArrow.style.transform = `rotate(${minutesRotation}deg)`;
   secondArrow.style.transform = `rotate(${secondsRotation}deg)`;
+
+  if (`rotate(${secondsRotation}deg)` === "rotate(6deg)") {
+    secondArrow.style.transition = "all 1s linear";
+  }
+  if (`rotate(${secondsRotation}deg)` === "rotate(354deg)") {
+    secondArrow.style.transition = "none";
+  }
 }
 setInterval(analog, 1000);
 // --------------------------------------------

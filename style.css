@@ -372,5 +372,6 @@ body {
   top: 2rem;
   left: 9.9rem;
   background-color: #ff0000;
+  transition: all 1s linear;
 }
 /* -------------------------------------------- */
