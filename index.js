@@ -586,7 +586,7 @@ loginBtn.addEventListener(`click`, (e) => {
 // dropdown menubar
 const dropdownButton = document.getElementById(`dropbtn`);
 const dropdownContent = document.getElementById(`dropdown-content`);
-dropdownButton.addEventListener(`mouseover`, () => {
+dropdownButton.addEventListener(`click`, () => {
   dropdownContent.classList.toggle(`show`);
 });
 Array.from(dropdownContent.children).forEach((item) => {
