@@ -431,6 +431,11 @@ class CreateUser {
 }
 const userVikas = new CreateUser("Vikas", "Gangwar", "20", "Manager");
 userVikas;
+{
+  // Destructure the object
+  const { firstName, age } = userVikas;
+  firstName, age; // Vikas 20
+}
 // CreateUser {firstName: 'Vikas', lastName: 'Gangwar', age: '20', designation: 'Manager'}
 {
   const color = ["red", "green", "blue"];
