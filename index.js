@@ -442,7 +442,15 @@ userVikas;
   const [a, b, c] = color;
   a, b, c; // red green blue
   const [, , getColor] = color;
+  const [{ 0: letter_R, 1: letter_E, 2: letter_D }] = color;
+  letter_R; // r
+  letter_E; // e
+  letter_D; // d
+
   getColor; // blue
+}
+function sayName(name) {
+  return "helo";
 }
 // --------------------------------------------
 // start of dom manipulation
