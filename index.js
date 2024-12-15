@@ -548,9 +548,14 @@ const input = document.getElementById(`input`);
 input.addEventListener(`keyup`, (e) => {
   if (e.key === "Enter") {
     const changeTitle = document.getElementsByClassName(`card-title`);
-    Array.from(changeTitle).forEach((element) => {
+    const changeTitleLength = Array.from(changeTitle);
+    // changeTitleLength.forEach((element) => {
+    //   element.innerText = e.target.value;
+    // });
+    for (let index = 0; index < changeTitleLength.length; index++) {
+      const element = changeTitleLength[index];
       element.innerText = e.target.value;
-    });
+    }
   }
 });
 // --------------------------------------------
