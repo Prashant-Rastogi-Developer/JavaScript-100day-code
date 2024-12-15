@@ -549,9 +549,6 @@ input.addEventListener(`keyup`, (e) => {
   if (e.key === "Enter") {
     const changeTitle = document.getElementsByClassName(`card-title`);
     const changeTitleLength = Array.from(changeTitle);
-    // changeTitleLength.forEach((element) => {
-    //   element.innerText = e.target.value;
-    // });
     for (let index = 0; index < changeTitleLength.length; index++) {
       const element = changeTitleLength[index];
       element.innerText = e.target.value;
@@ -604,12 +601,15 @@ const dropdownContent = document.getElementById(`dropdown-content`);
 dropdownButton.addEventListener(`click`, () => {
   dropdownContent.classList.toggle(`show`);
 });
-Array.from(dropdownContent.children).forEach((item) => {
-  item.addEventListener(`click`, (event) => {
-    dropdownButton.innerText = item.innerText;
+
+const dropdownContentArray = Array.from(dropdownContent.children);
+for (let index = 0; index < dropdownContentArray.length; index++) {
+  const element = dropdownContentArray[index];
+  element.addEventListener(`click`, (e) => {
+    dropdownButton.innerText = element.innerText;
     dropdownContent.classList.toggle(`show`);
   });
-});
+}
 // --------------------------------------------
 // clock
 const hourArrow = document.getElementById(`hourArrow`);
