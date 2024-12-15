@@ -449,9 +449,6 @@ userVikas;
 
   getColor; // blue
 }
-function sayName(name) {
-  return "helo";
-}
 // --------------------------------------------
 // start of dom manipulation
 // tag()
