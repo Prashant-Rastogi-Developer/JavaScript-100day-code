@@ -450,6 +450,24 @@ userVikas;
   getColor; // blue
 }
 // --------------------------------------------
+// calculate num1 and num2
+{
+  let num1 = 6;
+  let sign = "+";
+  let num2 = 4;
+  if (sign == "+") {
+    num1 + num2; // 10
+  } else if (sign == "-") {
+    num1 - num2; // 2
+  } else if (sign == "*") {
+    num1 * num2; // 24
+  } else if (sign == "/") {
+    num1 / num2; // 1.5
+  } else {
+    ("Wrong input"); // Wrong input
+  }
+}
+// --------------------------------------------
 // start of dom manipulation
 // tag()
 const createElement = (tagName, className, textContent) => {
