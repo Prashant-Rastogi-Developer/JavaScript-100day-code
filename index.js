@@ -477,6 +477,25 @@ userVikas;
   }
 }
 // --------------------------------------------
+// createPassword
+function createPassword() {
+  let password = "";
+  const passwordLength = 16;
+  const smallLetterAlphabet = "abcdefghijklmnopqrstuvwxyz";
+  const capitalLetterAlphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  const number = "1234567890";
+  const specialCharacter = '!@#$%^&*()_+{}[]"<>,.?';
+  const allCharacters =
+    smallLetterAlphabet + capitalLetterAlphabet + number + specialCharacter;
+  password += allCharacters[Math.floor(Math.random() * allCharacters.length)];
+
+  for (let index = password.length; index < passwordLength; index++) {
+    password += allCharacters[Math.floor(Math.random() * allCharacters.length)];
+  }
+  return password;
+}
+// createPassword(); // generating random password
+// --------------------------------------------
 // start of dom manipulation
 // tag()
 const createElement = (tagName, className, textContent) => {
