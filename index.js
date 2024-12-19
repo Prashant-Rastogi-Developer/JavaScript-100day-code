@@ -496,6 +496,38 @@ function createPassword() {
 }
 // createPassword(); // generating random password
 // --------------------------------------------
+// calculate num1 and num2
+{
+  let num1 = 6;
+  let sign = "+";
+  let num2 = 4;
+  switch (sign) {
+    case "+":
+      num1 + num2;
+      break;
+    case "-":
+      num1 - num2;
+      break;
+    case "*":
+      num1 * num2;
+      break;
+    case "/":
+      num1 / num2;
+      break;
+    default:
+      "Wrong input";
+  }
+}
+// --------------------------------------------
+// another method of creating table
+{
+  let count = 2;
+  for (let index = count; index <= count * 10; index = index + count) {
+    const element = index;
+    element;
+  }
+}
+// --------------------------------------------
 // start of dom manipulation
 // tag()
 const createElement = (tagName, className, textContent) => {
